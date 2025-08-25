@@ -1,0 +1,134 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  width: 750px;
+  height: 450px;
+  border: 2px solid #e46033;
+  box-shadow: 0 0 25px #e46033;
+  display: flex;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Left Welcome Panel */
+.welcome-box {
+  width: 50%;
+  background: linear-gradient(135deg, #e46033, #ff7043);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 30px;
+}
+
+.welcome-box h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.welcome-box p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Right Form Box */
+.form-box {
+  width: 50%;
+  background: #1b1b1b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.form-box h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Input Box */
+.input-box {
+  position: relative;
+  margin-top: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* Floating Label Effect */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+  color: #e46033;
+}
+
+/* Register Button */
+.btn {
+  margin-top: 25px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e46033, #ff7043);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Switch Text */
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+}
+
+.switch a {
+  color: #e46033;
+  text-decoration: none;
+}

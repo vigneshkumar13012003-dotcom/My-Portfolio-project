@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f0f0f;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  width: 750px;
+  height: 450px;
+  border: 2px solid #e46033;
+  box-shadow: 0 0 25px #e46033;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+}
+
+/* Left Welcome Box */
+.welcome-box {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, #e46033, #ff7043);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.welcome-box h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.welcome-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Right Form Box */
+.form-box {
+  width: 50%;
+  height: 100%;
+  background: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  animation: slideInRight 1s ease-in-out;
+}
+
+/* Heading */
+.form-box h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Input Fields */
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  transition: .5s;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: .5s;
+}
+
+/* Floating Label */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: #e46033;
+  font-size: 12px;
+}
+
+/* Button */
+.btn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e46033, #ff7043);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff7043, #e46033);
+  transform: scale(1.05);
+}
+
+/* Switch Text */
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.switch a {
+  color: #e46033;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
